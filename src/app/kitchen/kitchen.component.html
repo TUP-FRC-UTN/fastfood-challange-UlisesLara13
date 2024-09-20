@@ -1,0 +1,15 @@
+<h2>Pedidos Pendientes</h2>
+<ul>
+  <li *ngFor="let order of pendingOrders">
+    {{ order.number }} - {{ order.name }}: {{ order.description }}
+    <button (click)="startCooking(order)">Cocinar</button>
+  </li>
+</ul>
+
+<h2>Pedidos en Cocción</h2>
+<ul>
+  <li *ngFor="let order of cookingOrders">
+    {{ order.number }} - {{ order.name }}: {{ order.description }}
+    <button (click)="finishCooking(order)">Terminar</button>
+  </li>
+</ul>

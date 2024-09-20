@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit(orderForm)" #orderForm="ngForm">
+    <div>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" ngModel required minlength="2" maxlength="50">
+    </div>
+    <div>
+      <label for="description">Pedido:</label>
+      <input type="text" id="description" name="description" ngModel required minlength="3" maxlength="100">
+    </div>
+    <button type="submit" [disabled]="!orderForm.form.valid">Ordenar</button>
+  </form>
